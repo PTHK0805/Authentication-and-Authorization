@@ -8,13 +8,13 @@ import { Router } from "@angular/router";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  invalidLogin: boolean; 
+  invalidLogin!: boolean; 
 
   constructor(
     private router: Router, 
     private authService: AuthService) { }
 
-  signIn(credentials) {
+  signIn(credentials:any) {
     this.authService.login(credentials)
       .subscribe(result => { 
         if (result)

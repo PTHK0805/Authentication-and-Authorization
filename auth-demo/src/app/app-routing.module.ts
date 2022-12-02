@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminAuthGuard } from './admin-auth-guard.service';
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -8,7 +7,7 @@ import { NoAccessComponent } from './no-access/no-access.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'admin', component: AdminComponent, canActivate: [AdminAuthGuard] },
+  { path: 'admin', component: AdminComponent},
   { path: 'login', component: LoginComponent },
   { path: 'no-access', component: NoAccessComponent }
 ];
